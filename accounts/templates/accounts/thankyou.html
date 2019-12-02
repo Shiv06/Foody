@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   Registration Success
+{% endblock %}
+
+{% block body %}
+ <div class="jumbotron">
+   <h4 class="text-center lead m-auto">Thank You For Registring, Please login....</h4>
+   <a class="customlogin" data-url="{% url 'login' %}" href="#modal_login_id">Login</a>
+ </div>
+{% endblock %}

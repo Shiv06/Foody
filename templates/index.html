@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Welcome Foody
+{% endblock %}
+
+{% block body %}
+<button class="btn btn-warning customlogin my-4" type="button"
+       data-url="{% url 'login' %}">Login</button>
+
+<!-- Login Modal -->
+<div class="modal fade" id="modal_login_id" tabindex="-1" role="dailog" aria-labelledby="title_login_modal" aria-hidden="true">
+  <div class="modal-dialog" role=document>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title caps" id="title_login_modal">Log In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="login_form_id" class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a class="btn btn-info customregister" href="#modal_register_id" data-dismiss="modal"
+        data-toggle="modal" data-url="{% url 'register'%}">Register</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal_register_id" tabindex="-1" role="dailog" aria-labelledby="title_login_modal" aria-hidden="true">
+  <div class="modal-dialog" role=document>
+      <div id="register_form_id" class="modal-content">
+
+      </div>
+  </div>
+</div>
+{% endblock %}

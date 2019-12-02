@@ -1,0 +1,8 @@
+
+{% load bootstrap4 %}
+
+    <form id="frm_login_id" action="{% url 'login' %}"  method="post">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <input class="btn btn-primary" type="submit" name="" value="Login">
+    </form>
